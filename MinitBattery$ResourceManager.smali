@@ -28,12 +28,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 416
+    .line 401
     iput-object p1, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$ResourceManager;->this$0:Lcom/android/systemui/statusbar/policy/MinitBattery;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 419
+    .line 404
     :try_start_0
     const-string v1, "com.three.minit.minitbatterysettings"
 
@@ -45,7 +45,7 @@
 
     iput-object v1, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$ResourceManager;->mResourceContext:Landroid/content/Context;
 
-    .line 421
+    .line 406
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$ResourceManager;->mResourceContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -56,15 +56,15 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 425
+    .line 410
     :goto_0
     return-void
 
-    .line 422
+    .line 407
     :catch_0
     move-exception v0
 
-    .line 423
+    .line 408
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
@@ -78,7 +78,7 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 428
+    .line 413
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$ResourceManager;->mRes:Landroid/content/res/Resources;
 
     const-string v1, "drawable"
@@ -100,7 +100,7 @@
     .param p2, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 433
+    .line 418
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$ResourceManager;->mRes:Landroid/content/res/Resources;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$ResourceManager;->mResourceContext:Landroid/content/Context;
@@ -120,7 +120,7 @@
     .locals 1
 
     .prologue
-    .line 438
+    .line 423
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$ResourceManager;->mRes:Landroid/content/res/Resources;
 
     return-object v0

@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 58
+    .line 56
     iput-object p1, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$1;->this$0:Lcom/android/systemui/statusbar/policy/MinitBattery;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +39,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 61
+    .line 59
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -50,9 +50,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 62
+    .line 60
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$1;->this$0:Lcom/android/systemui/statusbar/policy/MinitBattery;
 
     const-string v1, "level"
@@ -66,7 +66,7 @@
     # setter for: Lcom/android/systemui/statusbar/policy/MinitBattery;->mLevel:I
     invoke-static {v0, v1}, Lcom/android/systemui/statusbar/policy/MinitBattery;->access$002(Lcom/android/systemui/statusbar/policy/MinitBattery;I)I
 
-    .line 63
+    .line 61
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$1;->this$0:Lcom/android/systemui/statusbar/policy/MinitBattery;
 
     const-string v1, "status"
@@ -80,44 +80,19 @@
     # setter for: Lcom/android/systemui/statusbar/policy/MinitBattery;->mStatus:I
     invoke-static {v0, v1}, Lcom/android/systemui/statusbar/policy/MinitBattery;->access$102(Lcom/android/systemui/statusbar/policy/MinitBattery;I)I
 
-    .line 70
+    .line 65
     :cond_0
-    :goto_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$1;->this$0:Lcom/android/systemui/statusbar/policy/MinitBattery;
 
     # invokes: Lcom/android/systemui/statusbar/policy/MinitBattery;->getSettings()V
-    invoke-static {v0}, Lcom/android/systemui/statusbar/policy/MinitBattery;->access$300(Lcom/android/systemui/statusbar/policy/MinitBattery;)V
+    invoke-static {v0}, Lcom/android/systemui/statusbar/policy/MinitBattery;->access$200(Lcom/android/systemui/statusbar/policy/MinitBattery;)V
 
-    .line 71
+    .line 66
     iget-object v0, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$1;->this$0:Lcom/android/systemui/statusbar/policy/MinitBattery;
 
     # invokes: Lcom/android/systemui/statusbar/policy/MinitBattery;->updateImageView()V
-    invoke-static {v0}, Lcom/android/systemui/statusbar/policy/MinitBattery;->access$400(Lcom/android/systemui/statusbar/policy/MinitBattery;)V
-
-    .line 72
-    return-void
-
-    .line 65
-    :cond_1
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "com.three.minit.BATTERY_TYPE_CHANGED"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lcom/android/systemui/statusbar/policy/MinitBattery;->access$300(Lcom/android/systemui/statusbar/policy/MinitBattery;)V
 
     .line 67
-    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/MinitBattery$1;->this$0:Lcom/android/systemui/statusbar/policy/MinitBattery;
-
-    const/4 v1, -0x1
-
-    # setter for: Lcom/android/systemui/statusbar/policy/MinitBattery;->mLastLevel:I
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/policy/MinitBattery;->access$202(Lcom/android/systemui/statusbar/policy/MinitBattery;I)I
-
-    goto :goto_0
+    return-void
 .end method
