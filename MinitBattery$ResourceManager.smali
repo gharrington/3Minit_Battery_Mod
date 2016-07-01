@@ -35,7 +35,7 @@
 
     .line 404
     :try_start_0
-    const-string v1, "com.three.minit.minitbatterysettings"
+    const-string v1, "com.three.minit.batteryresources"
 
     const/4 v2, 0x2
 
